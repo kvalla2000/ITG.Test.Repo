@@ -1,0 +1,56 @@
+﻿@model IEnumerable<ITG.Test.NewsFeed.ViewModels.NewsFeedViewModel>
+
+@{
+    ViewBag.Title = "NewsFeedView";
+}
+
+<h2>NewsFeedView</h2>
+
+<table class="table" id="tblFeeds">
+ <tbody>
+	<tr>
+		<th>
+			@Html.DisplayNameFor(model => model.Description)
+		</th>
+		<th></th>
+	</tr>
+
+	@foreach (var item in Model)
+	{
+		<tr>
+			<td>
+				@Html.DisplayFor(modelItem => item.Description)
+			</td>
+			<td>				
+			</td>
+		</tr>
+	}
+</tbody>	
+</table>
+<div>	
+	<button name="btnLoadMore" id="btnLoadMore" title="Load More" class="btn btn-secondary">Load More</button>
+</div>
+@section Scripts {
+	@Scripts.Render("~/bundles/jqueryval") @*For validate and validate-unobtrusive*@
+	<script type="text/javascript">
+		$('#btnLoadMore').click(function () {
+			$.ajax({
+				type: "GET",
+				url: "/NewsFeed/GetMoreFeeds/",
+				data: JSON.stringify(),
+				dataType: "json",
+				contentType: 'application/json; charset=utf-8',
+				success: function (data) {
+					$("#tblFeeds").empty();
+					$.each(data, function (index, item) {
+						$("#tblFeeds").append("<tr><td>" + item.Description + "</td></tr>");
+					});
+				},				
+				error: function () {
+					alert("Error occured!!")
+				}
+
+			});			
+		});
+	</script>
+	}

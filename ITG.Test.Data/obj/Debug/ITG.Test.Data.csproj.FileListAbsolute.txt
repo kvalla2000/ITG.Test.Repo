@@ -1,0 +1,7 @@
+C:\Kavitha\ITG.Test\ITG.Test.Data\obj\Debug\ITG.Test.Data.csprojResolveAssemblyReference.cache
+C:\Kavitha\ITG.Test\ITG.Test.Data\bin\Debug\ITG.Test.Data.dll
+C:\Kavitha\ITG.Test\ITG.Test.Data\bin\Debug\ITG.Test.Data.pdb
+C:\Kavitha\ITG.Test\ITG.Test.Data\bin\Debug\ITG.Test.Entities.dll
+C:\Kavitha\ITG.Test\ITG.Test.Data\bin\Debug\ITG.Test.Entities.pdb
+C:\Kavitha\ITG.Test\ITG.Test.Data\obj\Debug\ITG.Test.Data.dll
+C:\Kavitha\ITG.Test\ITG.Test.Data\obj\Debug\ITG.Test.Data.pdb
